@@ -147,8 +147,7 @@ const turmasFiltradas = ()=>{
         if( item.turma.toLowerCase().includes(inputTurma)){
             return item
         }
-    })
-    console.log(conteiner)
+    })    
     return turmaSelecionada ? conteiner.innerHTML = buscarTurma(turmaSelecionada).join("")
     :conteiner.innerHTML = buscarTurma(turmas)       
 }
@@ -244,8 +243,7 @@ const parcelarCurso = () => {
     let valorParcela
     let desconto = 0
     const newInstallments = document.getElementById("numero-parcela").value.toLowerCase()    
-    document.getElementById("numero-parcela").value=""
-    console.log(carrinhoCursos)
+    document.getElementById("numero-parcela").value=""   
     if (carrinhoCursos.length > 1) {
         switch (carrinhoCursos.length) {
             case 3:
@@ -261,8 +259,7 @@ const parcelarCurso = () => {
         }
        
         for (let valor of carrinhoCursos) {
-            valorTotal = valorTotal + valor
-            console.log(valorTotal)
+            valorTotal = valorTotal + valor;            
         }
         
         valorTotal = valorTotal * desconto
